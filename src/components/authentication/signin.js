@@ -44,11 +44,9 @@ export default class extends Component {
   }
 
   loginUser() {
-    // alert('loggin in ');
     this.setState({
       loaded: false
     });
-    // alert('hi')
 
     fireBase.authWithPassword({
       "email": this.state.email,
@@ -60,12 +58,7 @@ export default class extends Component {
       });
 
       if (error) {
-        // throw simple error,
-        // not just show validation? much eaiser.
-        // and hook this up with redux...
-        // and add it in...
-
-        alert(error);
+        alert('something isnt right', error);
       } else {
         AsyncStorage.setItem('user_data', JSON.stringify(user_data));
         this.props.navigator.push({

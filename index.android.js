@@ -4,33 +4,20 @@
  * @flow
  */
 
+import Main from './src/main'
+
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
+  MapView,
   Text,
-  View
+  View,
+  Animated,
+  TouchableOpacity
 } from 'react-native';
 
-class authTemplate extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
-
+// style example
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -50,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('authTemplate', () => authTemplate);
+AppRegistry.registerComponent('authTemplate', () => Main);

@@ -42,7 +42,6 @@ export default class signup extends Component {
       'email': this.state.email,
       'password': this.state.password
     }, (error, userData) => {
-      alert('error', error);
       if(error) {
         switch(error.code) {
 
@@ -57,7 +56,6 @@ export default class signup extends Component {
           default:
             alert(error);
         }
-
       } else {
         alert('Your account was created!');
       }
